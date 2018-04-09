@@ -64,7 +64,7 @@ app.post('/blogs', function(req, res){
 				console.log(err);
 				console.log('ERROR! Redirecting to form');
 				res.render('new');
-				window.alert('Error in DB. Hence redirected');
+				alert('Error in DB. Hence redirected');
 
 			}
 			else{
@@ -82,7 +82,7 @@ app.get('/blogs/:id', function(req, res){
 			console.log(err);
 			console.log('Redirecting to /blogs');
 			res.redirect('/blogs');
-			window.alert('Error in DB. Hence redirected');
+			alert('Error in DB. Hence redirected');
 		}
 		else{
 			res.render('show', {blog: foundBlog});
@@ -99,7 +99,7 @@ app.get('/blogs/:id/edit', function(req, res){
 			console.log(err);
 			console.log('Redirecting to /blogs');
 			res.redirect('/blogs');
-			window.alert('Error in DB. Hence redirected');
+			alert('Error in DB. Hence redirected');
 		}
 		else{
 			res.render('edit', {blog: editblog});
@@ -118,7 +118,7 @@ app.put('/blogs/:id', function(req, res){
 			console.log(err);
 			console.log('Redirecting to /blogs');
 			res.redirect('/blogs');
-			window.alert('Error in DB. Hence redirected');
+			alert('Error in DB. Hence redirected');
 		}
 		else{
 			var redirectURL = '/blogs/'+ req.params.id;
@@ -137,7 +137,7 @@ app.delete('/blogs/:id', function(req, res){
 			console.log(err);
 			console.log('Redirecting to /blogs');
 			res.redirect('/blogs');
-			window.alert('Error in DB. Hence redirected');
+			alert('Error in DB. Hence redirected');
 		}else{
 			res.redirect('/blogs');
 		}
